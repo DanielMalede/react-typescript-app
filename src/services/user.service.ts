@@ -1,14 +1,12 @@
 import Iuser from "../models/userModel";
 const API: string =
-  "https://my-json-server.typicode.com/Jeck99/fake-server/users";
+  "https://opensky-network.org/api";
 export const getUser = async (): Promise<any> => {
   try {
     return await fetch(API)
       .then((res: Response) => res.json())
-      .then((result) => {
-        let usersArray:Iuser[] = result
-        return usersArray
-      });
+      .then((result) => console.log(result)
+      );
   } catch (err) {
     console.log(err);
   }

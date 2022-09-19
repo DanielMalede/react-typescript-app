@@ -9,5 +9,6 @@ export const getUser = async (): Promise<any> => {
       );
   } catch (err) {
     console.log(err);
+    
   }
 };
